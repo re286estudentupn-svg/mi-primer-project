@@ -1,9 +1,7 @@
 
 # Guía documentada de Git y GitHub — *Práctica de Campo*
-**Alumno:** Renzo Alexander Palomino (re286estudentupn-svg)  
+ (re286estudentupn-svg)  
 **Curso:** Técnicas de programación orientada a objetos  
-**Docente:** Torres Rodríguez, Martin Eduardo  
-**Repositorio:** https://github.com/re286estudentupn-svg/mi-primer-project
 
 ---
 
@@ -22,7 +20,7 @@ git config --global init.defaultBranch main
 
 ## 1) Crear repositorio local (init) y primer commit
 ```bat
-cd "%USERPROFILE%\Desktop"
+cd ALEX\Desktop"
 md "mi primer project"
 cd "mi primer project"
 git init
@@ -108,7 +106,7 @@ git push origin --delete feature/saludo
 
 ## 7) Clonar un repositorio de GitHub a la máquina local
 ```bat
-cd "%USERPROFILE%\Desktop"
+cd ALEX\Desktop"
 git clone https://github.com/re286estudentupn-svg/mi-primer-project.git "mi-primer-project-clone"
 cd "mi-primer-project-clone"
 git remote -v
@@ -117,29 +115,4 @@ git log --oneline --graph --decorate --all --max-count=5
 ```
 **Producto**: copia local funcional con remoto `origin` configurado.
 
----
 
-## 8) Evidencias requeridas (Acción → Producto)
-Incluye capturas de pantalla de:
-1. `git status` (en `main`, árbol limpio).  
-2. `git log --oneline --graph --decorate --all` donde se vea el **merge**.  
-3. `git branch -a` (que muestre `main` y/o `origin/feature/saludo`).  
-4. `git remote -v` con la URL del repo.  
-5. Salida de `git clone …` y `git log …` en la carpeta clonada.  
-6. Portada del repo en GitHub mostrando los últimos commits.
-
-**Texto sugerido (para informe):**  
-> **Acción:** Inicialicé un repositorio local, realicé el primer commit, publiqué en GitHub, trabajé en la rama `feature/saludo` y la fusioné en `main`. Cloné el repositorio desde GitHub para validar el flujo de colaboración.  
-> **Producto:** Repositorio compartido en GitHub, historial con merge visible, capturas de `git status`, `git log --graph`, `git branch -a`, `git remote -v` y del clonado.
-
----
-
-## 9) Chuleta de comandos
-```bat
-git status
-git add <archivo>         &  git commit -m "mensaje"
-git log --oneline --graph --decorate --all
-git checkout -b feature/x &  git checkout main
-git merge feature/x       &  git branch -d feature/x
-git push -u origin rama   &  git pull
-```
